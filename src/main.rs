@@ -1,5 +1,5 @@
-mod p8;
+mod p9;
 
 fn main() {
-	p8::solve(13);
+	p9::solve();
 }	
