@@ -1,6 +1,5 @@
-mod util;
-mod p6;
+mod p8;
 
 fn main() {
-	p6::solve();
+	p8::solve(13);
 }	
