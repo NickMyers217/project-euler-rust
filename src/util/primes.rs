@@ -17,7 +17,7 @@ impl Sieve {
 
 	pub fn find_primes(&mut self, amount: usize) {
 		for i in 0..self.contents.len() {
-			if self.primes.len() == amount {
+			if self.primes.len() == amount && amount != 0 {
 				break;
 			}
 
@@ -31,6 +31,16 @@ impl Sieve {
 				}
 			}
 		}
+	}
+
+	pub fn sum_primes(&self) -> u64 {
+		let mut res: u64 = 0;
+
+		for p in &self.primes {
+			res += *p;
+		}
+
+		res
 	}
 
 	pub fn print_primes(&self) {
