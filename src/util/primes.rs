@@ -34,24 +34,12 @@ impl Sieve {
 	}
 
 	pub fn sum_primes(&self) -> u64 {
-		let mut res: u64 = 0;
-
-		for p in &self.primes {
-			res += *p;
-		}
-
-		res
+		*( &self.primes.iter().fold(0, |acc, n| acc + n) )
 	}
 
 	pub fn print_primes(&self) {
 		for p in &self.primes {
 			println!("{}", p);
-		}
-	}
-
-	pub fn print(&self) {
-		for val in &self.contents {
-			println!("{}", val);
 		}
 	}
 }
